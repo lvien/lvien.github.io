@@ -31,8 +31,9 @@ footer, header, hgroup, menu, nav, section {
 @font-face
 {
 	font-family: 'Bahnschrift';
-	src: url(../webfonts/bahnschrift.ttf);
+	src: url("../webfonts/bahnschrift.ttf") format ('truetype');
 }
+
 body {
 	line-height: 1;
 }
