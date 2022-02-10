@@ -28,7 +28,11 @@ section, summary, time, mark, audio, video {
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
-
+@font-face
+{
+	font-family: 'Bahnschrift';
+	src: url(../webfonts/bahnschrift.ttf);
+}
 body {
 	line-height: 1;
 }
