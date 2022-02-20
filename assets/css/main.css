@@ -195,6 +195,14 @@ input, select, textarea {
 		color: #dddddd;
 		line-height: 2.5rem;
 	}
+	.caption
+	{
+		font-size: 2rem;
+		font-weight: bold;
+		white-space: normal;
+		line-height: 2rem;
+		text-align: left;
+	}
 	.info, .info > *
 	{
 		font-family: Bahnschrift;
@@ -255,14 +263,20 @@ input, select, textarea {
 	}
 
 	
-	#menu-list > article
+	#menu-list > article, .resume
 	{
 		padding: 1rem 2rem 1rem 2rem;
 		border-radius: 10rem;
 		background-color: Black;
 		margin-bottom: 2.5rem;
-		border: solid 3px White;
 		width: 75%;
+		transition: all 0.35s ease;
+		position: relative;
+	}
+
+	#menu-list > article
+	{
+		border: solid 3px White;
 		transition: all 0.35s ease;
 	}
 
@@ -273,7 +287,7 @@ input, select, textarea {
 		cursor: pointer;
 	}
 
-	#menu-list > article > a > h2
+	#menu-list > article > a > h2, .resume > a > h2
 	{
 		color: White;
 		font-weight: bold;
@@ -284,6 +298,10 @@ input, select, textarea {
 	}
 	@media screen and (max-width: 736px)
 	{
+		.caption
+		{
+			font-size: 1.25rem;
+		}
 		#menu-info
 		{
 			padding: 0 0 0rem 0;
