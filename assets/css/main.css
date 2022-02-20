@@ -34,12 +34,6 @@ footer, header, hgroup, menu, nav, section {
 	src: url("../webfonts/bahnschrift.ttf") format('truetype');
 }
 
-@font-face
-{
-	font-family: 'boop';
-	src: url("../fonts/fuck.ttf") format('truetype');
-}
-
 body {
 	line-height: 1;
 }
@@ -229,7 +223,6 @@ input, select, textarea {
 		line-height: 1.5;
 		letter-spacing: 0.075em;
 		text-transform: uppercase;
-		margin: 0 0 1rem 0;
 	}
 
 	b, article h2, article h3
@@ -246,6 +239,70 @@ input, select, textarea {
 		text-transform: none;
 	}
 
+	#menu
+	{
+		display: flex;
+		padding-top: 0 !important;
+		width: 100%;
+	}
+	#menu-info
+	{
+		padding: 0 4rem 0 0;
+	}
+	#menu-list
+	{
+		 margin-bottom: 0;;
+	}
+
+	
+	#menu-list > article
+	{
+		padding: 1rem 2rem 1rem 2rem;
+		border-radius: 10rem;
+		background-color: Black;
+		margin-bottom: 2.5rem;
+		border: solid 3px White;
+		width: 75%;
+		transition: all 0.35s ease;
+	}
+
+	#menu-list > article:hover
+	{
+		background-color: #05B8FF;
+		width: 100%;
+		cursor: pointer;
+	}
+
+	#menu-list > article > a > h2
+	{
+		color: White;
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1rem;
+		margin: 0;
+	}
+	@media screen and (max-width: 736px)
+	{
+		#menu-info
+		{
+			padding: 0 0 0rem 0;
+		}
+
+		#menu
+		{
+			display: block;
+		}
+		#menu-list > article
+		{
+			width: 100%;
+		}
+		#menu-list > article:hover
+		{
+			background-color: #05B8FF;
+			cursor: pointer;
+		}
+	}
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 		border-bottom: 0;
 		color: inherit;
@@ -255,7 +312,7 @@ input, select, textarea {
 	h1 {
 		font-size: 4rem;/*3.25*/
 		line-height: 1.1;
-		margin: 0rem 0 2rem 0;
+		text-align: center;
 	}
 
 	h2 {
@@ -2152,10 +2209,10 @@ input, select, textarea {
 		-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 		border: 0;
-		border-radius: 0;
+		border-radius: 50px;
 		cursor: pointer;
 		display: inline-block;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: "Bahnschrift";
 		font-size: 0.8rem;
 		font-weight: 900;
 		letter-spacing: 0.075em;
@@ -2301,8 +2358,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			box-shadow: inset 0 0 0 2px #05B8FF;
-			color: #05B8FF !important;
+			background-color: #05B8FF;
 		}
 
 		input[type="submit"].primary,
@@ -2637,13 +2693,13 @@ input, select, textarea {
 
 /* Icon */
 
-	.icon {
+	.icon, .fa {
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
 	}
 
-		.icon:before {
+		.icon:before, .fa {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
 			display: inline-block;
@@ -2660,7 +2716,7 @@ input, select, textarea {
 			display: none;
 		}
 
-		.icon:before {
+		.icon:before, .fa:before {
 			line-height: inherit;
 		}
 
@@ -2668,7 +2724,7 @@ input, select, textarea {
 			font-weight: 900;
 		}
 
-		.icon.brands
+		.icon.brands, .fa
 		{
 			color: #eeeeee;
 		}
@@ -2677,7 +2733,7 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
-		.icon.brands:hover
+		.icon.brands:hover, .fa:hover
 		{
 			color: #05B8FF;
 		}
@@ -2791,7 +2847,6 @@ input, select, textarea {
 
 		ul.actions li {
 			padding: 0 0 0 1rem;
-			vertical-align: middle;
 			width: 40%;
 		}
 
@@ -3485,7 +3540,10 @@ section.artwork p
 			white-space: pre;
 			color: #ffffff;
 		}
-
+		#intro h1:hover
+		{
+			color: #05B8FF;
+		}
 		#intro blockquote {
 			border-left-color: #ffffff;
 		}
@@ -3540,6 +3598,7 @@ section.artwork p
 			font-family: Bahnschrift;
 			font-weight:400;
 			font-size: 92px;
+			transition: color 0.2s ease;
 		}
 
 		#intro h2
