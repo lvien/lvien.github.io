@@ -200,29 +200,49 @@ $(".slideshow").hover(
 	}
 );
 
+
 var slideshow1 = document.getElementById("slideshow1");
-slideshow1.index = 0;
-SetSlide(0,slideshow1);
+if (slideshow1)
+{
+	slideshow1.index = 0;
+	SetSlide(0,slideshow1);
+}
 
 var slideshow2 = document.getElementById("slideshow2");
-slideshow2.index = 0;
-SetSlide(0,slideshow2);
+if (slideshow2)
+{
+	slideshow2.index = 0;
+	SetSlide(0,slideshow2);
+}
 
 var slideshow3 = document.getElementById("slideshow3");
-slideshow3.index = 0;
-SetSlide(0,slideshow3);
+if (slideshow3)
+{
+	slideshow3.index = 0;
+	SetSlide(0,slideshow3);
+}
 
 var slideshow4 = document.getElementById("slideshow4");
-slideshow4.index = 0;
-SetSlide(0,slideshow4);
+if (slideshow4)
+{
+	slideshow4.index = 0;
+	SetSlide(0,slideshow4);
+}
 
 var slideshow5 = document.getElementById("slideshow5");
-slideshow5.index = 0;
-SetSlide(0,slideshow5);
+if (slideshow5)
+{
+	slideshow5.index = 0;
+	SetSlide(0,slideshow5);
+}
 
 var slideshow6 = document.getElementById("slideshow6");
-slideshow6.index = 0;
-SetSlide(0,slideshow6);
+if (slideshow6)
+{
+	slideshow6.index = 0;
+	SetSlide(0,slideshow6);
+}
+
 
 function AddSlide(n, SlideName)
 {

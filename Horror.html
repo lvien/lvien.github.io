@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<!--
+	#2A3C71 greyish blue
+	#05B8FF light blue
+	#000F2E dark blue
+	-->
+<html>
+	<head>
+		<title>Horror Game</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div>
+				<!-- Intro -->
+					<div id="intro">
+					<header>
+						<a href="index.html"><h1>ANDREW VIEN</h1></a>
+						<h2>G  a  m  e     D  e  s  i  g  n  e  r     |     G  a  m  e  p  l  a  y     P  r  o  g  r  a  m  m  e  r</h2>
+					</header>
+					</div>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="games.html">G  a  m  e  s</a></li>
+							<li><a href="software.html">C  o  d  e</a></li>
+							<li><a href="artwork.html">A  r  t</a></li>
+							<li class="active"><a href="about.html">A  b  o  u  t</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- Posts -->
+							<section style="position:relative; padding: 0; margin-bottom: 8rem"> <!--originally 8rem on left and right -->
+
+								<article>
+										<h2>Where Is Bo?<p>2023 - Present</p></h2>
+
+										<div class="video-container">
+												<iframe class="video" src="https://www.youtube.com/embed/f_U6SOQwq2U" target="_blank" allow="autoplay; encrypted-media" allowfullscreen="">
+												</iframe>
+										</div>
+								</article>
+								<article>
+									<h2>Overview</h2>
+									<div class="project">
+										<div>
+											<p>
+												In this Silent Hill/Resident Evil inspired survival-horror game, you are a young teen who must navigate through a deadly haunted house to find
+												your lost dog and escape. With little ways of defending yourself, you must solve puzzles, avoid hazards, and survive supernatural threats. This Unreal Engine 5 game
+												is in development, with level demos viewable. This game is planned to be shipped to Steam within late 2024/early 2025.</p>
+										</div>
+										<div>
+											<p class="info">
+											<b>Genre </b>First Person, Survival Horror, Puzzle<br/>
+											<b>Engine </b> Unreal Engine 5<br/>
+											<b>Tools</b> Unreal Engine, Visual Studio<br/>
+											<b>Team Size</b> 2<br/>
+											<b>Status</b> In Development
+											</p>
+										</div>
+								</article>
+								<article>
+									<h2>Roles and Responsibilities</h2>
+									<div class="project">
+										<div>
+											<b class="info">Gameplay Programming</b>
+											<ul class="info">
+												<li>C++ and blueprint programmed player mechanics, such as using doors to temporarily slow enemies</li>
+												<li>C++ and blueprint programmed ghost woman's ability to teleport between light sources in order to attack player</li>
+												<li>C++ and blueprint programmed survival horror inventory system, with stacking, organizing, dropping, and hotkey mechanics</li>
+												<li>C++ Programmed base class puzzles, doors and locks, interactable objects, and items</li>
+											</ul>
+											<b class="info">Level Design</b>
+											<ul class="info">
+												<li>Designed intro to main house level, and scripted narrative dialogue and events</li>
+												<li>Scripted narrative dialogue for events and puzzles</li>
+												<li>Designed and scripted demo level, with locked door and puzzle progression</li>
+											</ul>
+											</div>
+										<div>
+											<b class="info">AI</b>
+											<ul class="info">
+												<li>Blueprint programmed ghost AI to only navigate and teleport within light sources</li>
+												<li>C++ and blueprint programmed logic to help enemies navigate and distinguish between unlocked and locked doors</li>
+												<li>C++ and blueprint programmed AI door breach mechanic</li>
+												<li>Blueprint and Behavior Tree programmed enemy AI states, such as chasing, attacking, and abilities</li>
+											</ul>
+											<b class="info">UI and HUD</b>
+											<ul class="info">
+												<li>Created highlight interactive/object outline for easy mechanic recognition</li>
+												<li>Crosshair is replaced by different icons to indicate interactability, along with action key prompt</li>
+											</ul>
+										</div>
+									</div>
+								</article>
+
+								<article>
+									<h2>Screenshots</h2>
+									<div class="gallery" style="grid-template-columns: auto auto auto">
+										<div class="image frame">
+											<img class="image fit" src="images/HorrorGame/Horror7.png" alt="" />
+										</div>
+										<div class="image frame">
+											<img class="image fit" src="images/HorrorGame/Horror3.png" alt="" />
+										</div>
+										<div class="image frame">
+											<img class="image fit" src="images/HorrorGame/Horror1.png" alt="" />
+										</div>
+										<div class="image frame">
+											<img class="image fit" src="images/HorrorGame/Horror5.png" alt="" />
+										</div>
+										<div class="image frame">
+											<img class="image fit" src="images/HorrorGame/Horror2.png" alt="" />
+										</div>
+										<div class="image frame">
+											<img class="image fit" src="images/HorrorGame/Horror8.png" alt="" />
+										</div>
+											<!--
+											<a class="pagination previous" onclick="AddSlide(-1,slideshow3)">&#10094;</a>
+											<a class="pagination next" onclick="AddSlide(1,slideshow3)">&#10095;</a>
+											-->
+									</div>
+								</article>
+
+								<article class="section">
+									<h2>Design Concepts</h2>
+									<b class="info">The Ghost Woman</b>
+									<article>
+										<div>
+											<p>The ghost woman is bound only by lit areas, and when the player steps into the same light source
+												she will immediately charge and attack. She can teleport to any other light the player steps into.
+												The player must navigate to the end of the level while avoiding lights, finding alternate routes, turning off lights, or quickly running through.<br/><br/>
+
+												The challenge of programming the mechanic was a lack of a built-in light detection feature for Unreal Engine. I achieved this by creating a base class, which
+												could be inherited by light source objects (ceiling lights, lamps, etc.). The base class had a collision area component, which detects an overlapping player - this was the "player in light"
+												check. This component set the boundary for the ghost's movement via a navmesh applied to the actor's navigation filter.<br><br/>
+
+												The ghost actor, whose AI is programmed by a behavior tree, would check if the player was standing in a light area. If the player is in the same light, the ghost would charge at them.
+												If the player was in another light source, the ghost would execute the teleport mechanic.<br><br/>
+												<!--
+												I wanted to take a reverse twist on the horror-survival rule of staying in the light;
+												this ghost gets you when you're in the light. The inspiration came when I was walking home late at night on a quiet street, and imagined
+												 an eerie vision of a figure standing under a streetlamp in the distance. Suddenly the light would blink and
+												 it would instantly appear under the lamp right next of me. I was also inspired by horror movies <i>Lights Out</i> and <i>The Vanishing on 7th Street</i>,
+												although conversely they emphasized the safety of staying in light.-->
+												
+											</p>
+										</div>
+										<div class="project">
+											<div>
+												<div class="image frame"><img class="image fit" src="images/HorrorGame/Horror_Concept2.gif" alt="" /></div>
+												<p class="caption"><i>The ghost teleport ability</i></p>
+											</div>
+
+											<div>
+												<div class="image frame"><img class="image fit" src="images/HorrorGame/Horror_Concept1.png" alt="" /></div>
+												<p class="caption"><i>Navigation view of light area (pink). Ghost can't walk onto surrounding paths (green).</i></p>
+											</div>
+										</div>
+									</article>
+
+									<b class="info">Shadow Men</b>
+									<article>
+										<div>
+											<p>In this game you would rely on your flashlight to navigate most of the dark areas of levels. I wanted to enhance the experience of flashlight-heavy horror games where you simply reveal enemies in the dark;
+												Shadow men are completely invisible, but they cast shadows in the light. The player could only reveal them by lights. I made the flashlight's beam only faintly revealing their shadows.
+												Therefore the flashlight's reliability was limited and the player would be incentivized to utilize the environment.<br/><br/>
+
+												The shadow men also do not step foot into lighted areas (the same light area the ghost woman uses), so the player would be safe - but I am debating on keeping or discarding this mechanic throughout development
+												so I could leverage their unique shadow-casting visual.<br/><br/>
+
+												In the early stages the shadow men had the <i>Lights Out</i> mechanic, where they would disappear when illuminated. However, I felt this mechanic wasn't challenging enough, and was more of peek-a-boo. I wanted
+												the player to be pursued, paranoid, and not safe.
+											</p>
+										</div>
+										<div class="project">
+											<div>
+												<div class="image frame"><img class="image fit" src="images/HorrorGame/Horror_Concept3.gif" alt="" /></div>
+												<p class="caption">The shadow man in different lights</p>
+											</div>
+
+											<div>
+												<div class="image frame"><img class="image fit" src="images/HorrorGame/Horror_Concept4.gif" alt="" /></div>
+												<p class="caption">Shadow men early banish mechanic</p>
+											</div>
+										</div>
+									</article>
+
+									<b class="info">Door Navigation</b>
+									<article>
+										<div>
+											<p>For now, enemies have a simple Navigation AI for chasing a target. They will navigate around obstacles and can interact with doors, treating them as a valid path. Enemies cannot open locked doors,
+												nor will they attempt to open one, but once unlocked the AI will include it in their valid path. This was achieved by placing a NavLink component on doors. Locked doors
+												disable the NavLink, and reactivate once they are unlocked. Below are demonstrations of behavior in 3 different scenarios.
+											</p>
+										</div>
+										<div class="project">
+											<div>
+												<div class="image frame"><img class="image fit" src="images/HorrorGame/Horror_DoorTest1.gif" alt="" /></div>
+												<p class="caption"><i>1) Both doors unlocked</i></p>
+											</div>
+											<div>
+												<div class="image frame"><img class="image fit" src="images/HorrorGame/Horror_DoorTest2.gif" alt="" /></div>
+												<p class="caption"><i>2) Right door locked</i></p>
+											</div>
+											<div>
+												<div class="image frame"><img class="image fit" src="images/HorrorGame/Horror_DoorTest3.gif" alt="" /></div>
+												<p class="caption"><i>3) Right door unlocked after 5 seconds. Note since the right door is now the shortest path, the AI reroutes.</i></p>
+										</div>
+										</div>
+									</article>
+								</article>
+
+								<article>
+									<h2>Check back soon for more progress and updates!</h2>
+									<ul class="actions special" style="margin-top: 4rem">
+										<li style="margin: 0 auto 0 auto"><a href="games.html" class="button play">
+											Back to Games</a></li>
+									</ul>
+								</article>
+						</section>
+
+					</div>
+					<div class="bg fixed"></div>
+
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

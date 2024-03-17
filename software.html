@@ -11,229 +11,129 @@
 	-->
 <html>
 	<head>
-		<title>Programs</title>
+		<title>Software</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<body>
 		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+			<div>
 				<!-- Intro -->
 					<div id="intro">
 					<header>
-						<a href="index.html"><h1>A N D R E W&emsp;V I E N</h1></a>
-						<h2>G  a  m  e     D  e  s  i  g  n  e  r     |     S  o  f  t  w  a  r  e     P  r  o  g  r  a  m  m  e  r</h2>
+						<a href="index.html"><h1>ANDREW VIEN</h1></a>
+						<h2>G  a  m  e     D  e  s  i  g  n  e  r     |     G  a  m  e  p  l  a  y     P  r  o  g  r  a  m  m  e  r</h2>
 					</header>
 					</div>
 
 				<!-- Nav -->
-
 					<nav id="nav">
 						<ul class="links">
 							<li><a href="games.html">G  a  m  e  s</a></li>
-							<li class="active"><a href="software.html">P  r  o  g  r  a  m  s</a></li>
-							<li><a href="artwork.html">A  r  t  w  o  r  k</a></li>
-							<li><a href="about.html">A  b  o  u  t      M  e</a></li>
+							<li><a href="software.html">C  o  d  e</a></li>
+							<li><a href="artwork.html">A  r  t</a></li>
+							<li class="active"><a href="about.html">A  b  o  u  t</a></li>
 						</ul>
-						<!--
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/andrewvien/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					-->
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
 						<!-- Posts -->
 							<section style="position:relative; padding: 0; margin-bottom: 8rem"> <!--originally 8rem on left and right -->
-								<article>
-									<header class="major">
-									<h1>S  o  f  t  w  a  r  e</h1>
-									</header>
-
-									<header>
-										<h2>Records Database</h2>
-									</header>
-
-									<div id="slideshow1" class="slideshow" style="width: 100%; overflow: hidden">
-										<img class="image fit" style="position: relative" src="images/database1.png" alt="" />
-										<img class="image fit" style="position: relative" src="images/database2.png" alt="" />
-
-										<a class="pagination previous" onclick="AddSlide(-1,slideshow1)">&#10094;</a>
-										<a class="pagination next" onclick="AddSlide(1,slideshow1)">&#10095;</a>
+								<article class="project games">
+									<div>
+										<a href="software_records.html" class="preview container">
+											<img class="image fit" src="images/database1.png" alt="" />
+											<div class="preview"></div>
+										</a>
 									</div>
+									<div>
+										<header>
+											<h2>SQL Table Creator</h2>
+										</header>
 
-									<ul class="actions special">
-										<li><a style="background-color:Black" href="https://github.com/lvien/App-Database" target="_blank" class="button play">
-											D o w n l o a d</a></li>
-									</ul>
-									
-									<p class="info">
-									<b>Language </b> C++<br/>
-									<b>Tools </b> Qt Creator (qmake)<br/>
-									<b>Concepts </b> SQL, Data Structures, B+ Trees, Object-Oriented Programming, State Machine
-									</p>
-
-									<h3 style="color: #05B8FF">OVERVIEW</h3>
-									<p class="info">
-									Executable C++ application that creates records database based on user command input. Database includes elements which can be dynamically modified, and efficient search algorithms for conditional values. Additional database tables can be created through user-defined search filtering. Program involves SQL command parsing, custom multi maps through linked lists and B+ Trees, and file reading/writing.
-									</p>
-
-									<h3 style="color: #05B8FF">CONCEPTS</h3>
-									<b class="info" style="font-size: 1.25rem">SQL Syntax</b>
-									<ul class="info">
-										<li>SQL command parsing syntax</li>
-										<li>State machine recursion</li>
-									</ul>
-									<b class="info">Data Structures</b>
-									<ul class="info">
-										<li>Templated classes and type casting</li>
-										<li>Linkedlists, queues, stacks, nodes</li>
-									</ul>
-									<b class="info">B+ Trees</b>
-									<ul class="info">
-										<li>dynamic linked list children, leaf nodes, balancing</li>
-									</ul>
-									<b class="info">Object-Oriented Programming</b>
-									<ul class="info">
-										<li>Headpointers and tailpointers, dynamic memory allocation</li>
-									</ul>
-									
-								</article>
-								
-								<article>
-									<header>
-										<h2>Graphing Calculator</h2>
-									</header>
-									<!--<a class="image fit"><img src="images/FSITD.png" alt="" /></a>-->
-									<iframe class="w-embed-youtubevideo youtube" src="https://www.youtube.com/embed/jMrnSa6CHfE" target="_blank" style="position:relative;
-									top:0;width:100%;height:63vh;margin: 0" allow="autoplay; encrypted-media" allowfullscreen="">
-									</iframe>
-
-									<ul class="actions special">
-										<li><a style="background-color:Black" target="_blank" href="https://github.com/lvien/App-Graphing-Calculator" class="button play">D o w n l o a d</a></li>
-									</ul>
-
-									<p class="info">
-									<b>Language </b> C++<br/>
-									<b>Plugin </b> SFML<br/>
-									<b>Tools </b> Qt Creator (qmake)<br/>
-									<b>Concepts </b> Shunting Yard-Algorithm, Object-Oriented Programming, Linked Lists
-									</p>
-
-									<h3 style="color: #05B8FF">OVERVIEW</h3>
-									<p class="info">
-									Executable C++ application that accepts a user-inputted mathematical equation and outputs a visual, animated graph. Accepts linear and trigonemetric equations. Visual graph includes panning, zoom, animation, and linear/polar graph toggle.
-									</p>
-									
-								</article>
-
-								<article>
-									<header>
-										<h2>Game Of Life</h2>
-									</header>
-
-									<iframe class="w-embed-youtubevideo youtube" src="https://www.youtube.com/embed/JQemRAwHAik" target="_blank" style="position:relative;
-									top:0;width:100%;height:63vh;margin: 0" allow="autoplay; encrypted-media" allowfullscreen="">
-									</iframe>
-
-									<ul class="actions special">
-										<li><a style="background-color:Black" href="https://github.com/lvien/App-Game-of-Life" target="_blank" class="button play">
-											D o w n l o a d</a></li>
-									</ul>
-									
-									<p class="info">
-									<b>Language </b> C++<br/>
-									<b>Plugin </b> SFML<br/>
-									<b>Tools </b> Qt Creator (qmake)<br/>
-									<b>Concepts </b> 2D Arrays, File Input/Output
-									</p>
-
-									<h3 style="color: #05B8FF">OVERVIEW</h3>
-									<p class="info">
-									Executable C++ application that generates a visual simulation of Conway's Game of Life.
-									UI Allows simulation and UI manipulation. Features save/load simulation through reading/writing text file. Made through 2D arrays and basic C++ functions.
-									</p>
-
-								</article>
-
-								<article>
-									<header class="major">
-										<h1>C  O  U  R  S  E  S</h1>
-									</header>
-									<h2 style="white-space: normal; margin-bottom: 0; font-size: 2rem">
-											Education</h2>
-											<h3 class="skills">
-												B.S. Computer Science: Computer Game Design<br/>
-												University of California, Santa Cruz<br/>
-												June 2020
-											</h3>
-											<br/>
-									<div class="row" style="text-align: left">
-
-										<div style="flex: 1">
-											<h2 style="white-space: normal; margin-bottom: 0; font-size: 2rem">
-											CMPS 109</h2>
-											<h3 class="skills">
-												Advanced Programming
-											</h3>
+										<p>Executable C++ application that mimics SQL-style tables by creating record databases based on user input. Database can be modified, filtered based on key values, and imported/exported to external files.
+										</p>
+										<div class="role-container">
+											<p>C++ Programming</p><p>Data Structures</p><p>OOP</p><p>SFML</p><p>Shunting Yard</p>
 										</div>
-
-										<div style="flex: 1">
-											<h2 style="white-space: normal; margin-bottom: 0; font-size: 2rem">
-											CMPS 101</h2>
-											<h3 class="skills">
-												Algorithms & Abstract Data Types</p>
-											</h3>
-										</div>
-
-										<div style="flex: 1">
-											<h2 style="white-space: normal; margin-bottom: 0; font-size: 2rem">
-											CS 008</h2>
-											<h3 class="skills">
-												Fundamentals of Data Structures
-											</h3>
-										</div>
-
+										<ul class="actions special">
+											<li>
+												<a target="_blank" href="https://github.com/lvien/App-Database" class="button play">
+												View GitHub</a>
+											</li>
+											<li>
+												<a href="software_records.html" class="button play">
+												Learn More</a>
+											</li>
+										</ul>
 									</div>
-									<div class="row" style="text-align: left">
-
-										<div style="flex: 1">
-											<h2 style="white-space: normal; margin-bottom: 0; font-size: 2rem">
-											CS 003A</h2>
-											<h3 class="skills">
-												Object-Oriented Programming<br>(C++)
-											</h3>
-										</div>
-
-										<div style="flex: 1">
-											<h2 style="white-space: normal; margin-bottom: 0; font-size: 2rem">
-											CS 002</h2>
-											<h3 class="skills">
-												Fundamentals of Computer Science (C++)
-											</h3>
-										</div>
-
-										<div style="flex: 1">
-											<h2 style="white-space: normal; margin-bottom: 0; font-size: 2rem">
-											CS 003C</h2>
-											<h3 class="skills">
-												Fundamentals of Computer Science (Python)
-											</h3>
-										</div>
-
-									</div>
-									
 								</article>
 
+								<article class="project games">
+									<div>
+										<a href="software_graph.html" class="preview container">
+											<img class="image fit" src="images/graphing1.png" alt="" />
+											<div class="preview"></div>
+										</a>
+									</div>
+									<div>
+										<header>
+											<h2>Graphing Calculator</h2>
+										</header>
+
+										<p>Executable C++ application that accepts a user-inputted mathematical equation and outputs a visual, animated graph. Accepts linear and trigonemetric equations. Visual graph includes panning, zoom, animation, and linear/polar graph toggle.
+										</p>
+										<div class="role-container">
+											<p>C++ Programming</p><p>OOP</p><p>SFML</p><p>Shunting Yard</p><p>Reverse Polish</p>
+										</div>
+										<ul class="actions special">
+											<li>
+												<a target="_blank" href="https://github.com/lvien/App-Graphing-Calculator" class="button play">
+												View GitHub</a>
+											</li>
+											<li>
+												<a href="software_graph.html" class="button play">
+												Learn More</a>
+											</li>
+										</ul>
+									</div>
+								</article>
+
+								<article class="project games">
+									<div>
+										<a href="software_gameoflife.html" class="preview container">
+											<img class="image fit" src="images/gameoflife1.png" alt="" />
+											<div class="preview"></div>
+										</a>
+									</div>
+									<div>
+										<header>
+											<h2>Game Of Life Simulator</h2>
+										</header>
+
+										<p>Executable C++ application that generates a visual simulation of Conway's Game of Life. UI features allow simulation and visual manipulation. Features save/load simulation through reading/writing text file. Made through 2D arrays and basic C++ functions.</p>
+										<div class="role-container">
+											<p>C++ Programming</p><p>SFML</p>
+										</div>
+										<ul class="actions special">
+											<li>
+												<a target="_blank" href="https://github.com/lvien/App-Game-of-Life" class="button play">
+												View GitHub</a>
+											</li>
+											<li>
+												<a href="software_gameoflife.html" class="button play">
+												Learn More</a>
+											</li>
+										</ul>
+									</div>
+								</article>
 						</section>
 
 					</div>
-
-
+					<div class="bg fixed"></div>
 			</div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
