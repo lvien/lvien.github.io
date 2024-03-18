@@ -23,90 +23,35 @@ breakpoints({
 	xxsmall:   [null,       '360px'    ]
 });
 
+
+
 /**
-* Applies parallax scrolling to an element's background image.
-* @return {jQuery} jQuery object.
+ * Resume and contact header element
 */
-$.fn._parallax = function(intensity) {
 
-var	$window = $(window),
-	$this = $(this);
+(function()
+{
+	/*Adds resume and contact to every page except home*/
+	if (!document.getElementById('home'))
+	{
+		var div = document.createElement('div');
+		div.classList.add('contact');
+		div.innerHTML =
+		'<div><a href="https://drive.google.com/file/d/1DoMIxKBfJTK624vDPb-raB0xA9TmvHGp/view?usp=drive_link", target="_blank">Resume</a></div>\
+		<div><a href="mailto:liemahvien21@gmail.com" target="_blank" class="fa fa-envelope"></a>\
+		<a href="https://www.linkedin.com/in/andrewvien/" target="_blank" class="icon brands fa-linkedin-in"></a></div>';
+		document.body.appendChild(div);
+	}
 
-if (this.length == 0 || intensity === 0)
-	return $this;
-
-if (this.length > 1) {
-
-	for (var i=0; i < this.length; i++)
-		$(this[i])._parallax(intensity);
-
-	return $this;
-
-}
-
-if (!intensity)
-	intensity = 0.25;
-
-$this.each(function() {
-
-	var $t = $(this),
-		$bg = $('<div class="bg"></div>').appendTo($t),
-		on, off;
-
-	on = function() {
-
-		$bg
-			.removeClass('fixed')
-			.css('transform', 'matrix(1,0,0,1,0,0)');
-
-		$window
-			.on('scroll._parallax', function() {
-
-				var pos = parseInt($window.scrollTop()) - parseInt($t.position().top);
-
-				$bg.css('transform', 'matrix(1,0,0,1,0,' + (pos * intensity) + ')');
-
-			});
-
-	};
-
-	off = function() {
-
-		$bg
-			.addClass('fixed')
-			.css('transform', 'none');
-
-		$window
-			.off('scroll._parallax');
-
-	};
-
-	// Disable parallax on ..
-		if (browser.name == 'ie'			// IE
-		||	browser.name == 'edge'			// Edge
-		||	window.devicePixelRatio > 1		// Retina/HiDPI (= poor performance)
-		||	browser.mobile)					// Mobile devices
-			off();
-
-	// Enable everywhere else.
-		else {
-
-			breakpoints.on('>large', on);
-			breakpoints.on('<=large', off);
-
-		}
-
-});
-
-$window
-	.off('load._parallax resize._parallax')
-	.on('load._parallax resize._parallax', function() {
-		$window.trigger('scroll');
-	});
-
-return $(this);
-
-};
+	/*Adds page div container for each html page*/
+	var container = $('body div:first');
+	if (!container.attr("class") && !container.attr("id"))
+	{
+		container.attr("class","page");
+	}
+	/*Adds the icon widget sheet*/
+	document.body.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">');
+})();
 
 // Play initial animations on page load.
 $window.on('load', function() {
@@ -119,7 +64,6 @@ $window.on('load', function() {
 $('.scrolly').scrolly();
 
 // Background.
-$wrapper._parallax(0.925);
 
 // Intro.
 var $intro = $('#intro');

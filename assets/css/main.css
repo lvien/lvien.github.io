@@ -9,6 +9,10 @@
 
 :root {
 	--background-blue: #000f2e;
+	--color-normal: #eeeeee;
+	--color-highlight: #05B8FF;
+	--title-font-size: 4.25rem;
+	--title-left-position: calc(var(--title-font-size) / 4);
 	--header2-font-size: 2rem;
 	--header2-line-height: 1rem;/*1.75rem*/
 	--header3-font-size: 1.5rem;/*1.25rem*/
@@ -20,6 +24,7 @@
   --navbar-height: 3rem; /*4rem*/
   --button-size: 2rem;
   --button-radius: 13px;
+  --page-width: 1300px;
 }
 
 html, body, div, span, applet, object,
@@ -175,18 +180,22 @@ input, select, textarea {
 		line-height: 2.375;
 	}
 
+
 	a {
 		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-		border-bottom: dotted 1px;
+		
 		text-decoration: none;
+		color: var(--color-normal);
+		border-bottom-color: rgba(33, 41, 49, 0.5);
 	}
 
-		a:hover {
-			border-bottom-color: transparent;
-		}
+	a:hover {
+		color: var(--color-highlight);
+		border-bottom-color: transparent;
+	}
 
 	strong, b {
 		font-weight: 600;
@@ -216,7 +225,7 @@ input, select, textarea {
 
 	.info > b
 	{
-		color: #05B8FF; /*#eeeeee*/
+		color: var(--color-highlight); /*var(--color-normal)*/
 	}
 	b.info
 	{
@@ -257,7 +266,7 @@ input, select, textarea {
 	{
 		font-weight: normal;
 		text-align: left;
-		color: #05B8FF;
+		color: var(--color-highlight);
 		text-transform: none;
 	}
 
@@ -271,12 +280,49 @@ input, select, textarea {
 	{
 		padding: 0 4rem 0 0;
 	}
+	.contact
+	{
+		position: fixed;
+		height: var(--navbar-height);
+		top: 0;
+		right: calc((100vw - var(--page-width))/4); /*3vw*/
+		display: flex;
+		gap: 2rem;
+		align-items: center;
+		transform: translateX(50%);
+		justify-content: center;
+	}
+	.contact.bottom
+	{
+		position: relative;
+		bottom: 0;
+		margin: 2rem auto 2rem auto;
+		gap: 4rem;
+		height: fit-content;
+		line-height: 2.5rem;
+		right: 0;
+		display:block;
+		left: 0;
+		transform: none;
+	}
+	.contact > div, .contact.bottom > div
+	{
+		font-size: 1rem;
+		letter-spacing: 0.5rem;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.contact.bottom > div
+	{
+		font-size: var(--header3-font-size);
+		letter-spacing: 1rem;
+	}
 	#menu-list
 	{
 		 margin-bottom: 0;
 		 position: relative;
 		 display: flex;
-		 height: 45vh;
+		 height: 40vh;
 		 gap: 1rem;
 		max-height: 750px;
 	}
@@ -343,7 +389,7 @@ input, select, textarea {
 	#menu-list > a > div:hover
 	{
 		background-color: rgba(0,0,0,0.25);
-		color: #05B8FF;
+		color: var(--color-highlight);
 	}
 	#menu-list > article > a > h2, .resume > a > h2
 	{
@@ -376,7 +422,7 @@ input, select, textarea {
 		}
 		#menu-list > article:hover
 		{
-			background-color: #05B8FF;
+			background-color: var(--color-highlight);
 			cursor: pointer;
 		}
 	}
@@ -494,14 +540,7 @@ input, select, textarea {
 		color: #212931;
 	}
 
-	a {
-		color: #212931;
-		border-bottom-color: rgba(33, 41, 49, 0.5);
-	}
-
-		a:hover {
-			border-bottom-color: transparent;
-		}
+	
 
 	strong {
 		color: #212931;
@@ -511,21 +550,21 @@ input, select, textarea {
 		color: #ffffff;
 	}
 	h3, h4, h5, h6 {
-		color: #05B8FF;
+		color: var(--color-highlight);
 		font-weight: 25;
 	}
 
 	blockquote {
-		border-left-color: #eeeeee;
+		border-left-color: var(--color-normal);
 	}
 
 	code {
 		background: rgba(220, 220, 220, 0.25);
-		border-color: #eeeeee;
+		border-color: var(--color-normal);
 	}
 
 	hr {
-		border-bottom-color: #eeeeee;
+		border-bottom-color: var(--color-normal);
 	}
 
 /* Row */
@@ -2276,7 +2315,7 @@ input, select, textarea {
 		}
 
 	.box {
-		border-color: #eeeeee;
+		border-color: var(--color-normal);
 	}
 
 /* Button */
@@ -2444,7 +2483,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #05B8FF;
+			background-color: var(--color-highlight);
 		}
 
 		input[type="submit"].primary,
@@ -2711,7 +2750,7 @@ input, select, textarea {
 	input[type="email"],
 	select,
 	textarea {
-		border-color: #eeeeee;
+		border-color: var(--color-normal);
 	}
 
 		input[type="text"]:focus,
@@ -2732,7 +2771,7 @@ input, select, textarea {
 		}
 
 	.select-wrapper:before {
-		color: #eeeeee;
+		color: var(--color-normal);
 	}
 
 	input[type="checkbox"] + label,
@@ -2742,7 +2781,7 @@ input, select, textarea {
 
 		input[type="checkbox"] + label:before,
 		input[type="radio"] + label:before {
-			border-color: #eeeeee;
+			border-color: var(--color-normal);
 		}
 
 	input[type="checkbox"]:checked + label:before,
@@ -2812,7 +2851,7 @@ input, select, textarea {
 
 		.icon.brands, .fa
 		{
-			color: #eeeeee;
+			color: var(--color-normal);
 		}
 
 		.icon.brands:before {
@@ -2821,7 +2860,7 @@ input, select, textarea {
 
 		.icon.brands:hover, .fa:hover
 		{
-			color: #05B8FF;
+			color: var(--color-highlight);
 		}
 
 /* Image */
@@ -3179,7 +3218,7 @@ input, select, textarea {
 		}
 
 	ul.divided li {
-		border-top-color: #eeeeee;
+		border-top-color: var(--color-normal);
 	}
 
 	ul.icons li a.icon:hover:before {
@@ -3187,7 +3226,7 @@ input, select, textarea {
 	}
 
 	ul.icons.alt li .icon:before {
-		box-shadow: inset 0 0 0 2px #eeeeee;
+		box-shadow: inset 0 0 0 2px var(--color-normal);
 	}
 
 	ul.icons.alt li a.icon:hover:before {
@@ -3290,7 +3329,7 @@ input, select, textarea {
 		}
 
 	header.major .date:before, header.major .date:after {
-		border-top-color: #eeeeee;
+		border-top-color: var(--color-normal);
 	}
 
 /* Table */
@@ -3369,7 +3408,7 @@ input, select, textarea {
 			}
 
 	table tbody tr {
-		border-color: #eeeeee;
+		border-color: var(--color-normal);
 	}
 
 		table tbody tr:nth-child(2n + 1) {
@@ -3381,15 +3420,15 @@ input, select, textarea {
 	}
 
 	table thead {
-		border-bottom-color: #eeeeee;
+		border-bottom-color: var(--color-normal);
 	}
 
 	table tfoot {
-		border-top-color: #eeeeee;
+		border-top-color: var(--color-normal);
 	}
 
 	table.alt tbody tr td {
-		border-color: #eeeeee;
+		border-color: var(--color-normal);
 	}
 
 /* Embedded Video */
@@ -3536,7 +3575,7 @@ input, select, textarea {
 		}
 
 	.pagination a, .pagination span {
-		border-color: #eeeeee;
+		border-color: var(--color-normal);
 	}
 
 	.pagination a {
@@ -3555,11 +3594,11 @@ input, select, textarea {
 			}
 
 		.pagination a.active {
-			background-color: #eeeeee;
+			background-color: var(--color-normal);
 		}
 
 	.pagination span {
-		color: #eeeeee;
+		color: var(--color-normal);
 	}
 
 /* Wrapper */
@@ -3601,7 +3640,7 @@ input, select, textarea {
 			-webkit-transition-delay: 0.75s;
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
-			background-image: linear-gradient(#aaaaaa,#080808);
+			background-image: linear-gradient(black,black);/*linear-gradient(#aaaaaa,#080808);*/
 			content: '';
 			display: block;
 			height: 100%;
@@ -3646,7 +3685,6 @@ section.artwork p
 
 	#intro {
 		color: #ffffff;
-		padding: 4rem 4rem 6rem 4rem ;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -3671,7 +3709,6 @@ section.artwork p
 		position: relative;
 		cursor: default;
 		text-align: center;
-		z-index: 1;
 	}
 
 		#intro input, #intro select, #intro textarea {
@@ -3698,7 +3735,7 @@ section.artwork p
 		}
 		#intro h1:hover
 		{
-			color: #05B8FF;
+			color: var(--color-highlight);
 		}
 		#intro blockquote {
 			border-left-color: #ffffff;
@@ -3753,14 +3790,16 @@ section.artwork p
 			line-height: 1;
 			font-family: Bahnschrift;
 			font-weight:400;
-			font-size: 92px;
-			letter-spacing: 40px;
+			font-size: var(--title-font-size); /*92px*/
+			position: relative;
+			left: var(--title-left-position);
+			letter-spacing: calc(var(--title-font-size) * 10 / 23);/*40px;*/
 			transition: color 0.2s ease;
 		}
 
 		#intro h2
 		{
-			border: 0.5rem solid #05B8FF;
+			border: 0.5rem solid var(--color-highlight);
 			padding: 1rem 1.5rem 1rem 1.5rem; /*1rem*/
 			font-size:21px; /*20px*/
 			font-weight:normal;
@@ -3833,11 +3872,16 @@ section.artwork p
 				}
 
 		}
-
+	div.page
+	{
+		margin: 4rem auto auto auto;
+		max-width: var(--page-width);
+		position: relative;
+	}
 	section > article
 	{
 		/*background-color: #202020;*/
-		padding: 4rem 6rem 0rem 6rem;
+		margin-top: 4rem;
 	}
 	.role-container
 	{
@@ -3852,7 +3896,7 @@ section.artwork p
 		text-align: center;
 		font-weight: bold;
 		background-color: #303030;
-		color: #05B8FF
+		color: var(--color-highlight)
 	}
 	.project
 	{
@@ -3871,9 +3915,10 @@ section.artwork p
 	{
 		margin-bottom: 2.5rem;
 	}
-	.project.games
+	article.project.games
 	{
-		margin-bottom: 4rem;
+		margin: 4rem 0 0 0;
+		padding-bottom: 4rem;
 	}
 	.project > div
 	{
@@ -4050,12 +4095,12 @@ section.artwork p
 		transition: transform 1s ease, opacity 1s ease;
 		background: Black;
 		height: var(--navbar-height);
-		line-height: var(--navbar-height);
-		margin: -4rem auto 0 auto;
+		align-items: center;
+		margin: 0 auto 0 auto;
 		overflow: hidden;
 		position: sticky;
 		top: 0;
-		width: calc(100% - 4rem);
+		width: 100%;
 		max-width: 72rem;
 		z-index: 3;
 
@@ -4133,12 +4178,12 @@ section.artwork p
 			margin-bottom: 0;
 			padding-left: 0;
 			text-transform: uppercase;
+			height: 100%;
 		}
 
 			#nav ul.links li {
-				display: block;
-				padding-left: 0;
-				width: 25%;
+				padding: 0;
+				flex: 1;
 			}
 
 				#nav ul.links li a {
@@ -4151,9 +4196,12 @@ section.artwork p
 					font-family: Bahnschrift;
 					text-align: center;
 					font-weight: bold;
-					outline: none;
 					white-space: pre;
-					padding: 0 2rem;
+					width: 100%;
+					height: 100%;
+					justify-content: center;
+					align-items: center;
+					display: flex;
 				}
 
 				@media screen and (max-width: 736px)
@@ -4174,7 +4222,7 @@ section.artwork p
 					/*highlighted*/
 					#nav ul.links li a:hover {
 						color: #ffffff !important;
-						background-color: #05B8FF;
+						background-color: var(--color-highlight);
 					}
 				/*active*/
 				#nav ul.links li.active {
@@ -4205,16 +4253,9 @@ section.artwork p
 
 	#main {
 		position: relative;
-		margin: 0 auto;
-		width: calc(100% - 4rem);
 		max-width: 72rem;
-		z-index: 2;
 	}
 
-		#main > * {
-			padding: 0 4rem 2rem 4rem ;
-			margin: 0;
-		}
 
 			#main > *:first-child {
 				border-top: 0;
@@ -4307,7 +4348,7 @@ section.artwork p
 			}
 
 			#main > .posts > article {
-				border-color: #eeeeee;
+				border-color: var(--color-normal);
 				border-left-width: 2px;
 				border-style: solid;
 				border-top-width: 2px;
