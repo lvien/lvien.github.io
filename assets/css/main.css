@@ -55,10 +55,6 @@ footer, header, hgroup, menu, nav, section {
 	src: url("../webfonts/bahnschrift.ttf") format('truetype');
 }
 
-body {
-	line-height: 1;
-}
-
 ol, ul {
 	list-style: none;
 }
@@ -75,10 +71,6 @@ blockquote, q {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-body {
-	-webkit-text-size-adjust: none;
 }
 
 mark {
@@ -104,10 +96,6 @@ input, select, textarea {
 		width: device-width;
 	}
 
-	body {
-		-ms-overflow-style: scrollbar;
-	}
-
 	@media screen and (max-width: 480px) {
 
 		html, body {
@@ -122,10 +110,6 @@ input, select, textarea {
 
 	*, *:before, *:after {
 		box-sizing: inherit;
-	}
-
-	body {
-		background-color: #1e252d;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -168,18 +152,21 @@ input, select, textarea {
 			}
 
 		}
+body {
+	line-height: 1;
+	-webkit-text-size-adjust: none;
+	-ms-overflow-style: scrollbar;
+	background-color: Black;
+	color: #ffffff;
+}
 
-	body {
-		/*main text color*/
-		color: #ffffff;
-	}
 
-	body, input, select, textarea {
-		font-family: "Bahnschrift", Georgia, serif;
-		font-weight: 300;
-		font-size: 1rem;
-		line-height: 2.375;
-	}
+body, input, select, textarea {
+	font-family: "Bahnschrift", Georgia, serif;
+	font-weight: 300;
+	font-size: 1rem;
+	line-height: 2.375;
+}
 
 
 	a {
